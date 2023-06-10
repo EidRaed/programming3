@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PatientManagmentController">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="560.0" prefWidth="164.0" style="-fx-background-color: #28252e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="5.0" layoutY="406.0" mnemonicParsing="false" onAction="#Add_users" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: green;" text="Add" />
+            <Button layoutX="5.0" layoutY="457.0" mnemonicParsing="false" onAction="#Edit" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: Orange;" text="Update" />
+            <Button layoutX="5.0" layoutY="510.0" mnemonicParsing="false" onAction="#Delete" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: red;" text="Delete" />
+            <TextField fx:id="firstname_tf" layoutX="5.0" layoutY="42.0" onKeyReleased="#search_user" prefHeight="30.0" prefWidth="150.0" promptText="FirstName" />
+            <TextField fx:id="lastname_tf" layoutX="5.0" layoutY="80.0" prefHeight="30.0" prefWidth="150.0" promptText="LastName" />
+            <TextField fx:id="username_tf" layoutX="5.0" layoutY="120.0" prefHeight="30.0" prefWidth="150.0" promptText="UserName" />
+            <TextField fx:id="password_tf" layoutX="5.0" layoutY="158.0" prefHeight="30.0" prefWidth="150.0" promptText="Password" />
+            <TextField fx:id="id_tf" layoutX="5.0" layoutY="10.0" prefHeight="23.0" prefWidth="150.0" promptText="ID" />
+            <TextField fx:id="age_tf" layoutX="5.0" layoutY="240.0" prefHeight="30.0" prefWidth="150.0" promptText="Age" />
+            <TextField fx:id="phone_tf" layoutX="5.0" layoutY="281.0" prefHeight="30.0" prefWidth="150.0" promptText="Phone" />
+            <TextField fx:id="gender_tf" layoutX="5.0" layoutY="322.0" prefHeight="30.0" prefWidth="150.0" promptText="Gender" />
+            <TextField fx:id="role_tf" layoutX="5.0" layoutY="363.0" prefHeight="30.0" prefWidth="150.0" promptText="Role" />
+            <TextField fx:id="email_tf" layoutX="5.0" layoutY="197.0" prefHeight="30.0" prefWidth="150.0" promptText="Email" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableview" layoutX="164.0" layoutY="50.0" maxWidth="1500.0" onMouseClicked="#getSelected" prefHeight="509.0" prefWidth="841.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="40.0" text="Id" />
+          <TableColumn fx:id="firstname" prefWidth="90.0" text="FirstName" />
+           <TableColumn fx:id="lastname" prefWidth="90.0" text="LastName" />
+            <TableColumn fx:id="username" prefWidth="90.0" text="UserName" />
+            <TableColumn fx:id="password" prefWidth="90.0" text="Password" />
+            <TableColumn fx:id="phone" prefWidth="90.0" text="Phone" />
+            <TableColumn fx:id="email" prefWidth="129.0" text="Email" />
+             <TableColumn fx:id="gender" prefWidth="65.0" text="Gender" />
+            <TableColumn fx:id="role" prefWidth="115.0" text="Role" />
+            <TableColumn fx:id="age" prefWidth="90.0" text="Age" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textfieldsearch" layoutX="324.0" layoutY="23.0" promptText="Search" />
+   </children>
+</AnchorPane>
